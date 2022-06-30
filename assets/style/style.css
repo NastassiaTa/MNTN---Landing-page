@@ -16,12 +16,19 @@ a:focus {
 h1,
 h2,
 h3,
-h4 {
+h4,
+p {
     margin: 0;
+}
+
+img {
+    vertical-align: middle;
+    width: 100%;
 }
 
 body {
     font-family: 'Gilroy';
+    font-style: normal;
     background-color: #0B1D26;
     color: #fff;
     font-size: 18px;
@@ -41,7 +48,7 @@ body {
     margin-left: 16px;
     width: 16px;
     height: 24px;
-    background-image: url(../images/icons/arrow_downward_24px.svg);
+    background-image: url(../images/icons/arrow_downward_24px_2.svg);
     background-repeat: no-repeat;
     background-size: contain;
     transform: rotate(-90deg);
@@ -59,10 +66,49 @@ body {
     padding-top: 64px;
 }
 
+.section {
+    padding: 100px 0;
+}
+
+.section--overlap {
+    margin-top: -400px;
+    z-index: 9999;
+    position: relative;
+}
+
 .container-fluid {
     width: 1760px;
     margin: auto;
-    /* font-family: 'Chronicle Display' */
+}
+
+.container {
+    width: 1440px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-6 {
+    flex: 0 0 auto;
+    width: 50%;
+    padding: 0 15px;
+}
+
+.col-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+    padding: 0 15px;
+}
+
+.col-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+    padding: 0 15px;
 }
 
 .header .container-fluid {
@@ -86,11 +132,19 @@ body {
     margin-left: 40px;
 }
 
+.decorate-number {
+    position: absolute;
+    top: -96px;
+    left: -150px;
+    font-weight: 700;
+    font-size: 240px;
+    line-height: 240px;
+    opacity: 0.1;
+}
+
 .pretitle {
     display: flex;
     align-items: center;
-    font-family: 'Gilroy';
-    font-style: normal;
     font-weight: 800;
     line-height: 22px;
     letter-spacing: 6px;
@@ -133,12 +187,11 @@ body {
 
 .intro .acent-link {
     color: #fff;
-
-
 }
 
 .intro .acent-link::after {
     transform: none;
+    background-image: url(../images/icons/arrow_downward_24px.svg);
 }
 
 .intro .container-fluid--center {
@@ -160,6 +213,21 @@ body {
     margin: 32px 0;
 }
 
+.title--h2 {
+    font-weight: 600;
+    font-size: 64px;
+    margin: 27px 0;
+}
+
+.description {
+    line-height: 32px;
+    font-weight: 700;
+}
+
+.description:not(:last-child) {
+    margin-bottom: 27px;
+}
+
 .account {
     position: relative;
     display: flex;
@@ -178,54 +246,22 @@ body {
     background-size: contain;
 }
 
-.content{
+.article {
     position: relative;
-}
-.article_column {
-    display: inline-block;
-    
-}
-
-h2 {
-    font-weight: 600;
-    font-size: 64px;
+    margin-left: 150px;
+    margin-top: 141px;
+    max-width: 620px;
 }
 
-/* 
-@font-face {
-    font-family: 'Gilroy';
-    src: url('../../fonts/Gilroy-Bold.eot');
-    src: local('☺'), url('../../fonts/Gilroy-Bold.woff') format('woff'),
-        url('../../fonts/Gilroy-Bold.woff2') format('woff2'),
-        url('../../fonts/Gilroy-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
+.block-right {
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
 }
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('../../fonts/Gilroy-Medium.eot');
-    src: local('☺'), url('../../fonts/Gilroy-Medium.woff') format('woff'),
-        url('../../fonts/Gilroy-Medium.woff2') format('woff2'),
-        url('../../fonts/Gilroy-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('../../fonts/Gilroy-Heavy.eot');
-    src: local('☺'), url('../../fonts/Gilroy-Heavy.woff') format('woff'),
-        url('../../fonts/Gilroy-Heavy.woff2') format('woff2'),
-        url('../../fonts/Gilroy-Heavy.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-} */
 
 @font-face {
     font-family: 'Chronicle Display';
-    src: url('../fonts/Chronicle Display Semibold.eot');
-    src: local('☺'), url('../fonts/Chronicle Display Semibold.woff') format('woff'),
+    src: url('../fonts/Chronicle Display Semibold.woff') format('woff'),
         url('../fonts/Chronicle Display Semibold.ttf') format('truetype'),
         url('../fonts/Chronicle Display Semibold.woff2') format('woff2');
     font-weight: 600;
@@ -234,24 +270,31 @@ h2 {
 
 @font-face {
     font-family: 'Gilroy';
-    src: url('../fonts/Gilroy-Bold.eot');
-    src: local('☺'), url('../fonts/Gilroy-Bold.woff') format('woff'), url('../fonts/Gilroy-Bold.ttf') format('truetype'), url('../fonts/Gilroy-Bold.svg') format('svg');
+    src: url('../fonts/Gilroy-Bold.woff') format('woff'),
+        url('../fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
+    font-stretch: condensed
 }
 
 @font-face {
     font-family: 'Gilroy';
-    src: url('../fonts/Gilroy-Heavy.eot');
-    src: local('☺'), url('../fonts/Gilroy-Heavy.woff') format('woff'), url('../fonts/Gilroy-Heavy.ttf') format('truetype'), url('../fonts/Gilroy-Heavy.svg') format('svg');
+    src: url('../fonts/Gilroy-Heavy.woff') format('woff'),
+        url('../fonts/Gilroy-Heavy.woff2') format('woff2'),
+        url('../fonts/Gilroy-Heavy.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
+    font-display: swap;
+    font-stretch: condensed
 }
 
 @font-face {
     font-family: 'Gilroy';
-    src: url('../fonts/Gilroy-Medium.eot');
-    src: local('☺'), url('../fonts/Gilroy-Medium.woff') format('woff'), url('../fonts/Gilroy-Medium.ttf') format('truetype'), url('../fonts/Gilroy-Medium.svg') format('svg');
+    src: url('../fonts/Gilroy-Medium.woff') format('woff'),
+        url('../fonts/Gilroy-Medium.woff2') format('woff2'),
+        url('../fonts/Gilroy-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }

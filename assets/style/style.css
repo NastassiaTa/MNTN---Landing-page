@@ -21,6 +21,7 @@ h4 {
 }
 
 body {
+    font-family: 'Gilroy';
     background-color: #0B1D26;
     color: #fff;
     font-size: 18px;
@@ -30,14 +31,27 @@ body {
 
 .acent-link {
     color: #FBD784;
+    display: flex;
+    align-items: center;
 }
 
-.acent-link::after {}
+.acent-link::after {
+    content: "";
+    display: block;
+    margin-left: 16px;
+    width: 16px;
+    height: 24px;
+    background-image: url(../images/icons/arrow_downward_24px.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(-90deg);
+}
 
 .logo {
     font-size: 32px;
     line-height: 38px;
     letter-spacing: 0.01em;
+    font-family: 'Chronicle Display'
 }
 
 .header {
@@ -48,7 +62,7 @@ body {
 .container-fluid {
     width: 1760px;
     margin: auto;
-
+    /* font-family: 'Chronicle Display' */
 }
 
 .header .container-fluid {
@@ -109,8 +123,8 @@ body {
     left: 0;
     width: 100%;
     height: 700px;
-    background: rgb(11,29,38);
-    background: linear-gradient(180deg, rgba(11,29,38,0) 0%, rgba(11,29,38,1) 100%);
+    background: rgb(11, 29, 38);
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, rgba(11, 29, 38, 1) 100%);
 }
 
 .intro .pretitle::before {
@@ -119,9 +133,13 @@ body {
 
 .intro .acent-link {
     color: #fff;
+
+
 }
 
-.intro .acent-link::after {}
+.intro .acent-link::after {
+    transform: none;
+}
 
 .intro .container-fluid--center {
     width: 950px;
@@ -140,4 +158,100 @@ body {
     line-height: 100px;
     text-transform: capitalize;
     margin: 32px 0;
+}
+
+.account {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+}
+
+.account::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-image: url(../images/icons/cart.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.content{
+    position: relative;
+}
+.article_column {
+    display: inline-block;
+    
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 64px;
+}
+
+/* 
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../fonts/Gilroy-Bold.eot');
+    src: local('☺'), url('../../fonts/Gilroy-Bold.woff') format('woff'),
+        url('../../fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('../../fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../fonts/Gilroy-Medium.eot');
+    src: local('☺'), url('../../fonts/Gilroy-Medium.woff') format('woff'),
+        url('../../fonts/Gilroy-Medium.woff2') format('woff2'),
+        url('../../fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../fonts/Gilroy-Heavy.eot');
+    src: local('☺'), url('../../fonts/Gilroy-Heavy.woff') format('woff'),
+        url('../../fonts/Gilroy-Heavy.woff2') format('woff2'),
+        url('../../fonts/Gilroy-Heavy.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+} */
+
+@font-face {
+    font-family: 'Chronicle Display';
+    src: url('../fonts/Chronicle Display Semibold.eot');
+    src: local('☺'), url('../fonts/Chronicle Display Semibold.woff') format('woff'),
+        url('../fonts/Chronicle Display Semibold.ttf') format('truetype'),
+        url('../fonts/Chronicle Display Semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Bold.eot');
+    src: local('☺'), url('../fonts/Gilroy-Bold.woff') format('woff'), url('../fonts/Gilroy-Bold.ttf') format('truetype'), url('../fonts/Gilroy-Bold.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Heavy.eot');
+    src: local('☺'), url('../fonts/Gilroy-Heavy.woff') format('woff'), url('../fonts/Gilroy-Heavy.ttf') format('truetype'), url('../fonts/Gilroy-Heavy.svg') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Medium.eot');
+    src: local('☺'), url('../fonts/Gilroy-Medium.woff') format('woff'), url('../fonts/Gilroy-Medium.ttf') format('truetype'), url('../fonts/Gilroy-Medium.svg') format('svg');
+    font-weight: 500;
+    font-style: normal;
 }

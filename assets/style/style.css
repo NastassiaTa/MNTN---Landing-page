@@ -228,6 +228,8 @@ body {
     margin-bottom: 27px;
 }
 
+
+
 .account {
     position: relative;
     display: flex;
@@ -257,6 +259,41 @@ body {
     display: block;
     margin-right: 0;
     margin-left: auto;
+}
+
+/* Footer */
+
+.logo-bottom{
+margin-bottom: 24px;
+}
+
+li{
+    margin-bottom: 24px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.end {
+    font-weight: 500;
+    font-size: 18px;
+    opacity: 0.5;
+    margin-top: 122px;
+}
+
+.list {
+    display: flex;
+justify-content: space-between;
+}
+
+.list-contents {
+    color: #FBD784;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 24px;
 }
 
 @font-face {

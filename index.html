@@ -42,20 +42,18 @@
                     <a class="follow-us__icons" href="#"> <img src="assets/images/icons/instagram.svg" alt=""></a>
                     <a class="follow-us__icons" href="#"> <img src="assets/images/icons/twitter.svg" alt=""></a>
                 </div>
+                <div class="nav-slider">
+                    <ul>
+                        <li class="nav-slider__item nav-slider__item--active"> <a href="#0">Start</a></li>
+                        <li class="nav-slider__item"> <a href="#1">01</a></li>
+                        <li class="nav-slider__item"> <a href="#2">02</a></li>
+                        <li class="nav-slider__item"> <a href="#3">03</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="user-actions">
-        <div class="container-fluid container-fluid--content-end ">
-            <ul class="nav-slider">
-                <li class="nav-slider__item nav-slider__item--active"> <a href="#0">Start</a></li>
-                <li class="nav-slider__item"> <a href="#1">01</a></li>
-                <li class="nav-slider__item"> <a href="#2">02</a></li>
-                <li class="nav-slider__item"> <a href="#3">03</a></li>
-            </ul>
-        </div>
-    </div>
 
     <section id="1" class="section section--overlap">
         <div class="container">
@@ -175,7 +173,7 @@
     <script>
         $('a').click(function () {
             $('.nav-slider__item').removeClass('nav-slider__item--active');
-           $(this).parent('.nav-slider__item').addClass('nav-slider__item--active')
+            $(this).parent('.nav-slider__item').addClass('nav-slider__item--active')
             $('html, body').animate({
                 scrollTop: $($(this).attr('href')).offset().top
             }, 500);

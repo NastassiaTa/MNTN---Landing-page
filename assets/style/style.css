@@ -157,6 +157,8 @@ body {
 
 .user-actions .container-fluid {
     position: relative;
+    display: flex;
+    justify-content: space-between;
 }
 
 .follow-us {
@@ -173,6 +175,11 @@ body {
 }
 
 .nav-slider {
+    position: relative;
+    width: 77px;
+}
+
+.nav-slider ul {
     position: fixed;
 }
 
@@ -185,7 +192,7 @@ body {
 }
 
 .nav-slider__item--active {
-    border-color:#fff;
+    border-color: #fff;
 }
 
 .decorate-number {

@@ -72,6 +72,29 @@ body {
     padding-top: 64px;
 }
 
+.follow-us{
+writing-mode: vertical-rl;
+display: flex;
+margin-top: 276px;
+margin-left: 82px;
+position: absolute;
+}
+
+.follow-us__icons{
+    padding-top: 28px;
+}
+
+.nav-slider__item::after{
+content: '';
+display: block;
+width: 3px;
+height: 60px;
+background-color: #FFFFFF;
+opacity: 0.5;
+margin-left: 32px;
+
+}
+
 .section, .footer {
     padding: 100px 0;
 }

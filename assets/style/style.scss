@@ -1,3 +1,6 @@
+@import "./abstracts/index.scss";
+@import "./base/index.scss";
+
 * {
     box-sizing: border-box;
 }
@@ -208,7 +211,7 @@ body {
 .pretitle {
     display: flex;
     align-items: center;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 22px;
     letter-spacing: 6px;
     text-transform: uppercase;
@@ -355,44 +358,4 @@ body {
 
 .list li:not(:last-child) {
     margin-bottom: 24px;
-}
-
-@font-face {
-    font-family: 'Chronicle Display';
-    src: url('../fonts/Chronicle Display Semibold.woff') format('woff'),
-        url('../fonts/Chronicle Display Semibold.ttf') format('truetype'),
-        url('../fonts/Chronicle Display Semibold.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('../fonts/Gilroy-Bold.woff') format('woff'),
-        url('../fonts/Gilroy-Bold.woff2') format('woff2'),
-        url('../fonts/Gilroy-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    font-stretch: condensed
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('../fonts/Gilroy-Heavy.woff') format('woff'),
-        url('../fonts/Gilroy-Heavy.woff2') format('woff2'),
-        url('../fonts/Gilroy-Heavy.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-    font-stretch: condensed
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('../fonts/Gilroy-Medium.woff') format('woff'),
-        url('../fonts/Gilroy-Medium.woff2') format('woff2'),
-        url('../fonts/Gilroy-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
 }

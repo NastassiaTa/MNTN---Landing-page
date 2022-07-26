@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+
+
+body{
+    font-size: 24px;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -72,7 +78,8 @@ body {
 }
 
 .container-fluid {
-    max-width: 1760px;
+    max-width: 1790px;
+    padding: 0 15px;
     margin: auto;
 }
 
@@ -82,7 +89,8 @@ body {
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1470px;
+    padding: 0 15px;
     margin: auto;
 }
 
@@ -124,6 +132,8 @@ body {
 .header {
     width: 100%;
     padding-top: 64px;
+    position: relative;
+    z-index: 1;
 }
 
 .header .container-fluid {
@@ -261,6 +271,8 @@ body {
     max-width: 950px;
     margin: 0 auto;
     padding: 198px 0 1092px 0;
+    position: relative;
+    z-index: 1;
 }
 
 .title {
@@ -405,60 +417,25 @@ body {
     font-style: normal;
 }
 
-/* @media screen and (min-width: 540px) {
-    .menu-btn  {
-        display: none;
-    }
-} */
-
 .menu-btn {
     display: none;
 }
 
-@media screen and (max-width: 540px) {
-
-    .account,
-    .header nav,
+@media screen and (max-width: 912px) {
     .follow-us,
     .nav-slider,
     .decorate-number {
         display: none;
     }
 
-    .header,
-    .container-fluid--center {
-        width: 90%;
-        margin: 0 auto;
-
-    }
-.container-fluid--center{
-padding: 10px;
-}
-    .menu-btn {
-        display: block;
-        margin-right: 15px;
-    }
-
-    .pretitle {
-        font-size: 16px;
-    }
-
-    .title--h1 {
-        font-size: 60px;
-    }
-
-    .section {
-        width: 90%;
-        margin: 0 auto;
-        padding: 0;
+    .intro .container-fluid--center {
+        padding: 100px 15px 150px;
     }
 
     .col-7,
     .col-5 {
         max-width: 100%;
-        width: 90%;
-        margin: 0 auto;
-        padding: 15px;
+        flex: 0 0 100%;
     }
 
     .order-1 {
@@ -469,50 +446,43 @@ padding: 10px;
         order: 1;
     }
 
-    .row {
-        flex-direction: column;
-        padding: 15px 0 15px 0;
-    }
-
-    .title--h2 {
-        font-size: 50px;
-    }
-
     .article {
-        margin-left: 0;
+        margin: 0;
+        max-width: 100%;
     }
+
+    .section--overlap {
+        margin-top: 0;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .section img {
+        margin-top: 50px;
+    }
+
+    .footer {
+        padding: 50px 0;
+    }
+
+    .footer__copyright {
+        margin-bottom: 50px;
+    }
+
 
 }
-
-
-
-/* @media screen and (max-width: 540px) {
-    .account, .header nav {
-        display: none;
-    }
-} */
-
 
 @media screen and (max-width: 768px) {
 
     .account,
-    .header nav,
-    .follow-us,
-    .nav-slider,
-    .decorate-number {
+    .header nav {
         display: none;
-    }
-
-    .header,
-    .container-fluid--center {
-        width: 90%;
-        margin: 0 auto;
-
     }
 
     .menu-btn {
         display: block;
-        margin-right: 15px;
     }
 
     .pretitle {
@@ -523,114 +493,20 @@ padding: 10px;
         font-size: 60px;
     }
 
-    .section {
-        width: 90%;
-        margin: 0 auto;
-        padding: 0;
-    }
+}
 
-    .col-7,
-    .col-5 {
-        max-width: 100%;
-        width: 90%;
-        margin: 0 auto;
-        padding: 15px;
-    }
-
-    .order-1 {
-        order: 2;
-    }
-
-    .order-2 {
-        order: 1;
-    }
-
-    .row {
-        flex-direction: column;
-        padding: 15px 0 15px 0;
-    }
+@media screen and (max-width: 540px) {
 
     .title--h2 {
         font-size: 50px;
     }
 
-    .article {
-        margin-left: 0;
-    }
-
-}
-
-
-
-@media screen and (max-width: 912px) {
-
-    /* .account, */
-    /* .header nav, */
-    .follow-us,
-    .nav-slider,
-    .decorate-number {
-        display: none;
-    }
-
-    .header,
-    .container-fluid--center {
-        width: 90%;
-        margin: 0 auto;
-
-    }
-
-
-
-    /* .menu-btn {
-        display: block;
-        margin-right: 15px;
-    } */
-
-    /* .pretitle {
-        font-size: 16px;
-    }
-
-    .title--h1 {
-        font-size: 60px;
-    } */
-
-    .section {
-        width: 90%;
-        margin: 0 auto;
-        padding: 0;
-    }
-
-    .col-7,
-    .col-5 {
-        max-width: 100%;
-        width: 90%;
-        margin: 0 auto;
-        padding: 15px;
-    }
-
-    .order-1 {
-        order: 2;
-    }
-
-    .order-2 {
-        order: 1;
-    }
-
-    .row {
+    .footer__nav {
         flex-direction: column;
-        padding: 15px 0 15px 0;
     }
 
-    /* .title--h2 {
-        font-size: 50px;
-    } */
-
-    .article {
-        margin-left: 0;
+    .footer__nav .list:not(:first-child) {
+        margin-top: 50px;
     }
 
-}
-
-body{
-    font-size: 24px;
 }
